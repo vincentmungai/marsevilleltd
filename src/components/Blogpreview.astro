@@ -1,0 +1,133 @@
+---
+import "../styles/main.css";
+
+import acUnitImage from "../assets/images/ac02.png";
+import acUnitImage2 from "../assets/images/acunit.jpg";
+import { Image } from 'astro:assets';
+import blogPosts from "../content/blogArticles.json";
+
+---
+<section class="blog-section">
+    <div class="w-layout-blockcontainer container w-container">
+        <div class="blog-wrap">
+            <div data-w-id="75a36bb1-b82f-e7e8-c8ab-323544462663" style="opacity:1" class="blog-top-wrap">
+                <h2 class="section-title">Latest Blog</h2>
+                <div class="blog-button-wrap"><a data-w-id="3bf093be-8e2f-1c72-2d2b-43372bd2fc66" href="/blog"
+                        class="main-button-link w-inline-block">
+                        <div>More Blogs</div>
+                        <div class="button-icon-wrap">
+                            <div 
+                                class="button-icon icon-one"></div>
+                            <div 
+                                class="button-icon icon-two"></div>
+                            <div style="background-color:rgb(255,255,255)" class="button-icon"></div>
+                        </div>
+                    </a></div>
+            </div>
+            <div class="blog-list-wrap">
+                <div class="w-dyn-list">
+                    <div role="list" class="w-dyn-items w-row">
+                        <div role="listitem" class="blog-item w-dyn-item w-col w-col-4">
+                            <div id="w-node-_0ac33083-b2f7-7179-56b1-60afb6e1747a-b23f4d0c"
+                                data-w-id="0ac33083-b2f7-7179-56b1-60afb6e1747a" style="opacity:1"
+                                class="blog-list-item-wrap">
+                                <div class="blog-title-wrap"><a href="###/the-future-of-urban-transportation"
+                                        class="blog-title-link">{blogPosts[0].title}</a></div>
+                                        <p></p>
+                                <div class="blog-image-wrap"><a href="###/the-future-of-urban-transportation"
+                                        class="blog-image-link w-inline-block"><Image
+                                        src={acUnitImage2}
+                                            loading="lazy" alt="blog image"
+                                            class="blog-image" /></a>
+                                    <div class="blog-publish-text">
+                                        <div>{blogPosts[0].date}</div>
+                                    </div>
+                                </div>
+                                <div class="blog-post-intro-wrap">
+                                    <p class="blog-post-intro">{blogPosts[0].excerpt}</p>
+                                    <div class="blog-post-read-more-wrap">
+                                        <div class="blog-post-read-more-link"><a
+                                                href="###/the-future-of-urban-transportation"
+                                                class="read-more-link">Read More About This Blog</a></div>
+                                        <div class="read-more-line-break"><a
+                                                href="###/the-future-of-urban-transportation"
+                                                class="blog-arrow-wrap w-inline-block"><img
+                                                    src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e4792f078565646926ea4_service-card-arrow.svg"
+                                                    loading="lazy" alt="arrow image"
+                                                    class="service-card-arrow-icon" /></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="listitem" class="blog-item w-dyn-item w-col w-col-4">
+                            <div id="w-node-_0ac33083-b2f7-7179-56b1-60afb6e1747a-b23f4d0c"
+                                data-w-id="0ac33083-b2f7-7179-56b1-60afb6e1747a" style="opacity:1"
+                                class="blog-list-item-wrap">
+                                <div class="blog-title-wrap"><a href="###/innovations-redefining-transportation"
+                                        class="blog-title-link">{blogPosts[1].title}</a></div>
+                                <div class="blog-image-wrap"><a href="###/innovations-redefining-transportation"
+                                        class="blog-image-link w-inline-block"><Image
+                                        src={acUnitImage}
+                                            loading="lazy" alt="blog image"
+                                            class="blog-image" /></a>
+                                    <div class="blog-publish-text">
+                                        <div>{blogPosts[1].date}</div>
+                                    </div>
+                                </div>
+                                <div class="blog-post-intro-wrap">
+                                    <p class="blog-post-intro">{blogPosts[1].excerpt}</p>
+                                    <div class="blog-post-read-more-wrap">
+                                        <div class="blog-post-read-more-link"><a
+                                                href="###/innovations-redefining-transportation"
+                                                class="read-more-link">Read More About This Blog</a></div>
+                                        <div class="read-more-line-break"><a
+                                                href="###/innovations-redefining-transportation"
+                                                class="blog-arrow-wrap w-inline-block"><img
+                                                    src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e4792f078565646926ea4_service-card-arrow.svg"
+                                                    loading="lazy" alt="arrow image"
+                                                    class="service-card-arrow-icon" /></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="listitem" class="blog-item w-dyn-item w-col w-col-4">
+                            <div id="w-node-_0ac33083-b2f7-7179-56b1-60afb6e1747a-b23f4d0c"
+                                data-w-id="0ac33083-b2f7-7179-56b1-60afb6e1747a" style="opacity:1"
+                                class="blog-list-item-wrap">
+                                <div class="blog-title-wrap"><a
+                                        href="###/insights-into-future-transport-landscapes"
+                                        class="blog-title-link">{blogPosts[2].title}</a></div>
+                                <div class="blog-image-wrap"><a
+                                        href="###/insights-into-future-transport-landscapes"
+                                        class="blog-image-link w-inline-block"><Image
+                                            src={acUnitImage2}
+                                            loading="lazy" alt="blog image"
+                                            class="blog-image"/></a>
+                                    <div class="blog-publish-text">
+                                        <div>{blogPosts[2].date}</div>
+                                    </div>
+                                </div>
+                                <div class="blog-post-intro-wrap">
+                                    <p class="blog-post-intro">{blogPosts[2].excerpt}</p>
+                                    
+                                    <div class="blog-post-read-more-wrap">
+                                        
+                                        <div class="blog-post-read-more-link"><a
+                                                href="###/insights-into-future-transport-landscapes"
+                                                class="read-more-link">Read More About This Blog</a></div>
+                                        <div class="read-more-line-break"><a
+                                                href="###/insights-into-future-transport-landscapes"
+                                                class="blog-arrow-wrap w-inline-block"><img
+                                                    src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e4792f078565646926ea4_service-card-arrow.svg"
+                                                    loading="lazy" alt="arrow image"
+                                                    class="service-card-arrow-icon" /></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

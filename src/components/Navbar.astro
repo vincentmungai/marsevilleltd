@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+import "../styles/main.css";
+import brandLogo from "../assets/images/brandLogo.png";
+---
+<div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease"
+                data-easing2="ease" role="banner" class="nav-bar w-nav">
+                <div class="large-container w-container">
+                    <div class="nav-wrap"><a href="/" aria-current="page"
+                            class="brand-link w-nav-brand w--current"><Image style="height: 80px; width: auto;"
+                                src={brandLogo}
+                                loading="lazy" alt="Brand Logo" /></a>
+                        <nav role="navigation" class="nav-menu w-nav-menu">
+                            <div class="nav-menu-list-wrap"><a href="/" aria-current="page"
+                                    class="nav-menu-link w-nav-link w--current">Home</a><a href="about-us"
+                                    class="nav-menu-link w-nav-link">About</a><a href="services"
+                                    class="nav-menu-link w-nav-link">Services</a>
+                                <a href="/blog" class="nav-menu-link w-nav-link">Blog</a>
+                            </div>
+                            <div class="nav-button-wrap"><a data-w-id="0c314794-299f-f362-76f5-af541b0bb628"
+                                    href="contact.html" class="main-button-link w-inline-block">
+                                    <div>Get Started</div>
+                                    <div class="button-icon-wrap">
+                                        <div class="button-icon icon-one"></div>
+                                        <div class="button-icon icon-two"></div>
+                                        <div class="button-icon"></div>
+                                    </div>
+                                </a></div>
+                        </nav>
+                        <div class="menu-button w-nav-button">
+                            <div class="w-icon-nav-menu"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
