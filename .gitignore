@@ -4,6 +4,9 @@ dist/
 # generated types
 .astro/
 
+#back office
+sanity/
+
 # dependencies
 node_modules/
 

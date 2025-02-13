@@ -1,10 +1,11 @@
 ---
 import "../styles/main.css";
 
-import acUnitImage from "../assets/images/ac02.png";
-import acUnitImage2 from "../assets/images/acunit.jpg";
 import { Image } from 'astro:assets';
-import blogPosts from "../content/blogArticles.json";
+import { allArticles } from "../lib/allArticles";
+
+const blogPosts = await allArticles();
+console.log("hello");
 
 ---
 <section class="blog-section">
@@ -31,12 +32,12 @@ import blogPosts from "../content/blogArticles.json";
                             <div id="w-node-_0ac33083-b2f7-7179-56b1-60afb6e1747a-b23f4d0c"
                                 data-w-id="0ac33083-b2f7-7179-56b1-60afb6e1747a" style="opacity:1"
                                 class="blog-list-item-wrap">
-                                <div class="blog-title-wrap"><a href="###/the-future-of-urban-transportation"
+                                <div class="blog-title-wrap"><a href={`articles/${blogPosts[0].slug}`}
                                         class="blog-title-link">{blogPosts[0].title}</a></div>
                                         <p></p>
-                                <div class="blog-image-wrap"><a href="###/the-future-of-urban-transportation"
+                                <div class="blog-image-wrap"><a href={`articles/${blogPosts[0].slug}`}
                                         class="blog-image-link w-inline-block"><Image
-                                        src={acUnitImage2}
+                                        src={blogPosts[0].coverImage} inferSize
                                             loading="lazy" alt="blog image"
                                             class="blog-image" /></a>
                                     <div class="blog-publish-text">
@@ -47,10 +48,10 @@ import blogPosts from "../content/blogArticles.json";
                                     <p class="blog-post-intro">{blogPosts[0].excerpt}</p>
                                     <div class="blog-post-read-more-wrap">
                                         <div class="blog-post-read-more-link"><a
-                                                href="###/the-future-of-urban-transportation"
+                                                href={`articles/${blogPosts[0].slug}`}
                                                 class="read-more-link">Read More About This Blog</a></div>
                                         <div class="read-more-line-break"><a
-                                                href="###/the-future-of-urban-transportation"
+                                                href={`articles/${blogPosts[0].slug}`}
                                                 class="blog-arrow-wrap w-inline-block"><img
                                                     src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e4792f078565646926ea4_service-card-arrow.svg"
                                                     loading="lazy" alt="arrow image"
@@ -63,11 +64,11 @@ import blogPosts from "../content/blogArticles.json";
                             <div id="w-node-_0ac33083-b2f7-7179-56b1-60afb6e1747a-b23f4d0c"
                                 data-w-id="0ac33083-b2f7-7179-56b1-60afb6e1747a" style="opacity:1"
                                 class="blog-list-item-wrap">
-                                <div class="blog-title-wrap"><a href="###/innovations-redefining-transportation"
+                                <div class="blog-title-wrap"><a href={`articles/${blogPosts[1].slug}`}
                                         class="blog-title-link">{blogPosts[1].title}</a></div>
-                                <div class="blog-image-wrap"><a href="###/innovations-redefining-transportation"
+                                <div class="blog-image-wrap"><a href={`articles/${blogPosts[1].slug}`}
                                         class="blog-image-link w-inline-block"><Image
-                                        src={acUnitImage}
+                                        src={blogPosts[1].coverImage} inferSize
                                             loading="lazy" alt="blog image"
                                             class="blog-image" /></a>
                                     <div class="blog-publish-text">
@@ -78,10 +79,10 @@ import blogPosts from "../content/blogArticles.json";
                                     <p class="blog-post-intro">{blogPosts[1].excerpt}</p>
                                     <div class="blog-post-read-more-wrap">
                                         <div class="blog-post-read-more-link"><a
-                                                href="###/innovations-redefining-transportation"
+                                                href={`articles/${blogPosts[1].slug}`}
                                                 class="read-more-link">Read More About This Blog</a></div>
                                         <div class="read-more-line-break"><a
-                                                href="###/innovations-redefining-transportation"
+                                                href={`articles/${blogPosts[1].slug}`}
                                                 class="blog-arrow-wrap w-inline-block"><img
                                                     src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e4792f078565646926ea4_service-card-arrow.svg"
                                                     loading="lazy" alt="arrow image"
@@ -95,12 +96,12 @@ import blogPosts from "../content/blogArticles.json";
                                 data-w-id="0ac33083-b2f7-7179-56b1-60afb6e1747a" style="opacity:1"
                                 class="blog-list-item-wrap">
                                 <div class="blog-title-wrap"><a
-                                        href="###/insights-into-future-transport-landscapes"
+                                        href={`articles/${blogPosts[2].slug}`}
                                         class="blog-title-link">{blogPosts[2].title}</a></div>
                                 <div class="blog-image-wrap"><a
-                                        href="###/insights-into-future-transport-landscapes"
+                                        href={`articles/${blogPosts[2].slug}`}
                                         class="blog-image-link w-inline-block"><Image
-                                            src={acUnitImage2}
+                                            src={blogPosts[2].coverImage} inferSize
                                             loading="lazy" alt="blog image"
                                             class="blog-image"/></a>
                                     <div class="blog-publish-text">
@@ -113,10 +114,10 @@ import blogPosts from "../content/blogArticles.json";
                                     <div class="blog-post-read-more-wrap">
                                         
                                         <div class="blog-post-read-more-link"><a
-                                                href="###/insights-into-future-transport-landscapes"
+                                                href={`articles/${blogPosts[2].slug}`}
                                                 class="read-more-link">Read More About This Blog</a></div>
                                         <div class="read-more-line-break"><a
-                                                href="###/insights-into-future-transport-landscapes"
+                                                href={`articles/${blogPosts[2].slug}`}
                                                 class="blog-arrow-wrap w-inline-block"><img
                                                     src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e4792f078565646926ea4_service-card-arrow.svg"
                                                     loading="lazy" alt="arrow image"

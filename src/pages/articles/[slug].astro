@@ -4,25 +4,24 @@ import Navbar from "../../components/Navbar.astro";
 import Footer from "../../components/Footer.astro";
 import Blogpreview from "../../components/Blogpreview.astro";
 import personPlaceholder from "../../assets/images/person-placeholder.jpg";
+import acBlogImage from "../../assets/images/acBlogImage.avif";
 import { Image } from 'astro:assets';
 
-import blogArticles from "../../content/blogArticles.json";
+import { allArticles } from "../../lib/allArticles";
 
-// Generate static routes based solely on params.
+const articles = await allArticles();
 export async function getStaticPaths() {
-  return blogArticles.map((article) => ({
+  const articles = await allArticles();
+  
+  return articles.map((article: { slug: string }) => ({
     params: { slug: article.slug },
+    props: { article },
   }));
 }
 
-// Use the slug from Astro.params to find your article.
 const { slug } = Astro.params;
-const article = blogArticles.find((a) => a.slug === slug);
+const { article } = Astro.props;
 
-if (!article) {
-  throw new Error(`Article not found for slug: ${slug}`);
-}
-const renderedContent = article.content;
 ---
 <!DOCTYPE html>
 <html data-wf-domain="moversflow-template.webflow.io" data-wf-page="6633225d7125979f5ae634f6"
@@ -94,19 +93,17 @@ const renderedContent = article.content;
                 </div>
             </div>
             <div data-w-id="dac57eee-8080-d03f-da2e-589186136124" style="opacity:0" class="blog-single-image-wrap"><img
-                    src="https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/663371bc893ea851424cc907_blog-featured-single.jpg"
+                    src={article.coverImage}
                     loading="eager" alt="Blog image"
-                    sizes="(max-width: 479px) 92vw, (max-width: 991px) 95vw, (max-width: 1279px) 96vw, 1200px"
-                    srcset="https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/663371bc893ea851424cc907_blog-featured-single-p-500.jpg 500w, https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/663371bc893ea851424cc907_blog-featured-single-p-800.jpg 800w, https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/663371bc893ea851424cc907_blog-featured-single-p-1080.jpg 1080w, https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/663371bc893ea851424cc907_blog-featured-single.jpg 1200w"
-                    class="blog-single-image" /></div>
+                    class="blog-single-image" style="max-height: 400px; width: 100%; object-fit: cover; object-position: center;"/></div>
             <div class="blog-summary-whole-wrap">
                 <div data-w-id="dac57eee-8080-d03f-da2e-589186136127" style="opacity:0" class="blog-summary-wrap">
                     <div class="blog-summary ">
-                        {renderedContent}
+                        {article.content}
                         <figure style="max-width:1114pxpx"
                             class="w-richtext-align-fullwidth w-richtext-figure-type-image">
                             <div><img
-                                    src="https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/66333832400a321a862c481e_blog-summary.jpg"
+                                    src="../../assets/images/acBlogImage.avif"
                                     loading="lazy" alt="blog summary" /></div>
                         </figure>
                         <p>In this blog article, we’ll take a look at five significant developments fueling technological innovation in the air conditioning (AC) industry. These advancements are transforming how AC companies operate and how customers experience indoor comfort.</p>
@@ -127,10 +124,10 @@ const renderedContent = article.content;
                                 src={personPlaceholder}
                                 loading="lazy" alt="Blog author image" class="blog-author-image" /></a>
                         <div class="blog-author-details-wrap">
-                            <div class="blog-author-top-wrap"><a href="###-authors/akeem-hauck"
+                            <div class="blog-author-top-wrap"><a href="#"
                                     class="blog-author-name">{article.author ? article.author : 'Unknown'}</a>
                                 <div>
-                                    <p class="team-member-role">Marketing</p>
+                                    <p class="team-member-role">Founder</p>
                                 </div>
                                 <div>
                                     <p class="blog-author-intro">Passionate about innovation, sustainability, and the
@@ -194,17 +191,17 @@ const renderedContent = article.content;
                                 <div role="list" class="w-dyn-items">
                                     
                                     {
-                                        blogArticles.map(article => (
+                                        articles.map((article: { title: string }) => (
                                         <div role="listitem" class="w-dyn-item">
-                                        <div class="blog-related"><a href="###/the-future-of-urban-transportation"
+                                        <div class="blog-related"><a href={`../articles/${article.slug}`}
                                                 class="blog-related-image-wrap w-inline-block"><img
-                                                    src="https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/6633337c885f3eb487544f27_blog-6.jpg"
+                                                    src={article.coverImage}
                                                     loading="lazy" alt="Blog image"
                                                     class="blog-related-image" /></a>
                                             <div class="blog-related-text-wrap"><a
-                                                    href="###/the-future-of-urban-transportation"
+                                                    href={`../articles/${article.slug}`}
                                                     class="blog-related-title">{article.title}</a>
-                                                <div><a href="###-category/insights"
+                                                <div><a href={`../articles/${article.slug}`}
                                                         class="blog-category-text">Insights</a></div>
                                             </div>
                                         </div>

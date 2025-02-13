@@ -4686,10 +4686,11 @@ flex-direction: column;
 }
 
 .contact-whole-wrap {
-  grid-column-gap: 40px;
-  grid-row-gap: 40px;
-  justify-content: space-between;
-  display: flex;
+display: flex;
+width: 100%;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
 }
 
 .conatct-link-image-wrap {
@@ -10539,4 +10540,15 @@ flex-direction: column;
   color: #000 !important;
   font-size: 16px;
   columns: 300px;
+}
+@media only screen and (max-width: 991px){
+  .conatct-form-image{
+    display: none;
+  }
+}
+.contact-whole-wrap,.contact-link-wrap,.contact-link-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }

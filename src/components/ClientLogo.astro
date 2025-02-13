@@ -1,20 +1,43 @@
 ---
 import "../styles/main.css"
+import { Image } from "astro:assets";
+
+import lgLogo from "../assets/images/lg.png";
+import lecoolLogo from "../assets/images/lecool.png";
+import greeLogo from "../assets/images/gree.png";
+import samsungLogo from "../assets/images/samsung.webp";
+import kenhaLogo from "../assets/images/kenha.jpg";
 ---
 <div data-w-id="d8cd9e7d-1b28-e1d5-05d7-0218dc52b54c" class="client-logo-area">
-    <div id="w-node-d8cd9e7d-1b28-e1d5-05d7-0218dc52b54d-dc52b54c" class="client-logo-wrap"><img
-            src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e6907df55a3ca5a4b9c63_client-logo-1.svg"
-            loading="lazy" alt="client logos" class="client-logo-image" /></div>
-    <div class="client-logo-wrap"><img
-            src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e6e35fcf60eb561b91f29_client-logo-2.svg"
-            loading="lazy" alt="client logos" class="client-logo-image" /></div>
-    <div class="client-logo-wrap"><img
-            src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e6e3561cbfab2aab756bf_client-logo-3.svg"
-            loading="lazy" alt="client logos" class="client-logo-image" /></div>
-    <div class="client-logo-wrap"><img
-            src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e6e35107ad78417896ba2_client-logo-4.svg"
-            loading="lazy" alt="client logos" class="client-logo-image" /></div>
-    <div class="client-logo-wrap"><img
+    <div id="w-node-d8cd9e7d-1b28-e1d5-05d7-0218dc52b54d-dc52b54c" class="client-logo-wrap"><Image
+            src={lgLogo}
+            loading="lazy" alt="client logos" class="client-logo-image 1" /></div>
+    <div class="client-logo-wrap"><Image
+            src={lecoolLogo}
+            loading="lazy" alt="client logos" class="client-logo-image 2" /></div>
+    <div class="client-logo-wrap"><Image
+            src={greeLogo}
+            loading="lazy" alt="client logos" class="client-logo-image 3" style="height: 100px;"/></div>
+    <div class="client-logo-wrap"><Image
+            src={samsungLogo}
+            loading="lazy" alt="client logos" class="client-logo-image 4" style="height: 160px;"/></div>
+    <!-- <div class="client-logo-wrap"><img
             src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e6e352c76e5015449785f_client-logo-5.svg"
-            loading="lazy" alt="client logos" class="client-logo-image" /></div>
+            loading="lazy" alt="client logos" class="client-logo-image" /></div> -->
 </div>
+<p class="section-title">
+        Trusted By:
+</p>
+<div data-w-id="d8cd9e7d-1b28-e1d5-05d7-0218dc52b54c" class="client-logo-area">
+        <div id="w-node-d8cd9e7d-1b28-e1d5-05d7-0218dc52b54d-dc52b54c" class="client-logo-wrap"><Image
+                src={kenhaLogo}
+                loading="lazy" alt="client logos" class="client-logo-image 1" style="height: 100px;"/></div>
+    </div>
+<style>
+        .client-logo-image{
+                object-fit: cover;
+                width: auto;
+                height: 40px;
+        }
+
+</style>
