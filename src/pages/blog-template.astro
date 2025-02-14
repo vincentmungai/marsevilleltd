@@ -3,31 +3,38 @@ import "../styles/main.css";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import Blogpreview from "../components/Blogpreview.astro";
+
+import { allCompanyInformation } from "../lib/seoContent"
+
+const seoContent = await allCompanyInformation();
+
+const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
+
 ---
 <!DOCTYPE html>
-<!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Thu Aug 01 2024 11:45:50 GMT+0000 (Coordinated Universal Time) -->
-<html data-wf-domain="moversflow-template.webflow.io" data-wf-page="6633225d7125979f5ae634f6"
+
+<html  data-wf-page="6633225d7125979f5ae634f6"
     data-wf-site="661caa5ae3dacb8bb23f4d00" lang="en" data-wf-locale="en" data-wf-collection="6633225d7125979f5ae634ab"
     data-wf-item-slug="navigating-tomorrows-transport-challenges">
 
 <head>
     <meta charset="utf-8" />
-    <title>AC solutions - Marsevilleltd</title>
+    <title>AC solutions - {seoContent[0].companyName}</title>
     <meta
-        content="Marseville Company Limited provides expert air conditioning solutions, including supply, installation, maintenance, and repairs for residential and commercial spaces in Nairobi. Explore our trusted brands—LG, GREE, LECOOL, and Samsung—for energy-efficient cooling. Contact us today!."
+        content={seoContent[0].seoDescription}
         name="description" />
-    <meta content="Marseville Company Limited provides expert air conditioning solutions, including supply, installation, maintenance, and repairs for residential and commercial spaces in Nairobi. Explore our trusted brands—LG, GREE, LECOOL, and Samsung—for energy-efficient cooling. Contact us today!"
+    <meta content={seoContent[0].seoDescription}
         property="og:title" />
     <meta
-        content="Marseville Company Limited provides expert air conditioning solutions, including supply, installation, maintenance, and repairs for residential and commercial spaces in Nairobi. Explore our trusted brands—LG, GREE, LECOOL, and Samsung—for energy-efficient cooling. Contact us today!"
+        content={seoContent[0].seoDescription}
         property="og:description" />
     <meta
         content="https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/663371bc893ea851424cc907_blog-featured-single.jpg"
         property="og:image" />
-    <meta content="Marseville Company Limited provides expert air conditioning solutions, including supply, installation, maintenance, and repairs for residential and commercial spaces in Nairobi. Explore our trusted brands—LG, GREE, LECOOL, and Samsung—for energy-efficient cooling. Contact us today!"
+    <meta content={seoContent[0].seoDescription}
         property="twitter:title" />
     <meta
-        content="Marseville Company Limited provides expert air conditioning solutions, including supply, installation, maintenance, and repairs for residential and commercial spaces in Nairobi. Explore our trusted brands—LG, GREE, LECOOL, and Samsung—for energy-efficient cooling. Contact us today!"
+        content={seoContent[0].seoDescription}
         property="twitter:description" />
     <meta
         content="https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/663371bc893ea851424cc907_blog-featured-single.jpg"
@@ -35,7 +42,8 @@ import Blogpreview from "../components/Blogpreview.astro";
     <meta property="og:type" content="website" />
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="Webflow" name="generator" />
+   
+    <meta name="keywords" content={keywords} />
     <link
         href="styles/main.css"
         rel="stylesheet" type="text/css" />
@@ -114,7 +122,7 @@ import Blogpreview from "../components/Blogpreview.astro";
                                 src="https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/665714984525fb16ee2a0adf_blog-author-2.jpg"
                                 loading="lazy" alt="Blog author image" class="blog-author-image" /></a>
                         <div class="blog-author-details-wrap">
-                            <div class="blog-author-top-wrap"><a href="###-authors/akeem-hauck"
+                            <div class="blog-author-top-wrap"><a href="#"
                                     class="blog-author-name">Akeem Hauck</a>
                                 <div>
                                     <p class="team-member-role">Route Planner</p>
@@ -166,7 +174,7 @@ import Blogpreview from "../components/Blogpreview.astro";
                         <div class="transport-list-wrap">
                             <div class="w-dyn-list">
                                 <div role="list" class="w-dyn-items">
-                                    <div role="listitem" class="w-dyn-item"><a href="###-category/transport"
+                                    <div role="listitem" class="w-dyn-item"><a href="#"
                                             class="service-transport-link w-inline-block">
                                             <div class="transport-link-icon-wrap"><img
                                                     src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/663388834875ba4eba1a1452_service-link%20-icon.svg"
@@ -174,7 +182,7 @@ import Blogpreview from "../components/Blogpreview.astro";
     " class="transport-link-icon" /></div>
                                             <div>Transport</div>
                                         </a></div>
-                                    <div role="listitem" class="w-dyn-item"><a href="###-category/shipping"
+                                    <div role="listitem" class="w-dyn-item"><a href="#"
                                             class="service-transport-link w-inline-block">
                                             <div class="transport-link-icon-wrap"><img
                                                     src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/663388834875ba4eba1a1452_service-link%20-icon.svg"
@@ -182,7 +190,7 @@ import Blogpreview from "../components/Blogpreview.astro";
     " class="transport-link-icon" /></div>
                                             <div>Shipping</div>
                                         </a></div>
-                                    <div role="listitem" class="w-dyn-item"><a href="###-category/insights"
+                                    <div role="listitem" class="w-dyn-item"><a href="#"
                                             class="service-transport-link w-inline-block">
                                             <div class="transport-link-icon-wrap"><img
                                                     src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/663388834875ba4eba1a1452_service-link%20-icon.svg"
@@ -200,7 +208,7 @@ import Blogpreview from "../components/Blogpreview.astro";
                             <div class="w-dyn-list">
                                 <div role="list" class="w-dyn-items">
                                     <div role="listitem" class="w-dyn-item">
-                                        <div class="blog-related"><a href="###/the-future-of-urban-transportation"
+                                        <div class="blog-related"><a href="#"
                                                 class="blog-related-image-wrap w-inline-block"><img
                                                     src="https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/6633337c885f3eb487544f27_blog-6.jpg"
                                                     loading="lazy" alt="Blog image"
@@ -208,15 +216,15 @@ import Blogpreview from "../components/Blogpreview.astro";
                                                     srcset="https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/6633337c885f3eb487544f27_blog-6-p-500.jpg 500w, https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/6633337c885f3eb487544f27_blog-6-p-800.jpg 800w, https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/6633337c885f3eb487544f27_blog-6-p-1080.jpg 1080w, https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/6633337c885f3eb487544f27_blog-6.jpg 1103w"
                                                     class="blog-related-image" /></a>
                                             <div class="blog-related-text-wrap"><a
-                                                    href="###/the-future-of-urban-transportation"
+                                                    href="#"
                                                     class="blog-related-title">The Future of Urban Transportation</a>
-                                                <div><a href="###-category/insights"
+                                                <div><a href="#"
                                                         class="blog-category-text">Insights</a></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div role="listitem" class="w-dyn-item">
-                                        <div class="blog-related"><a href="###/innovations-redefining-transportation"
+                                        <div class="blog-related"><a href="#"
                                                 class="blog-related-image-wrap w-inline-block"><img
                                                     src="https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/663371e557eba941c826e087_blog-1.jpg"
                                                     loading="lazy" alt="Blog image"
@@ -224,16 +232,16 @@ import Blogpreview from "../components/Blogpreview.astro";
                                                     srcset="https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/663371e557eba941c826e087_blog-1-p-500.jpg 500w, https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/663371e557eba941c826e087_blog-1-p-800.jpg 800w, https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/663371e557eba941c826e087_blog-1-p-1080.jpg 1080w, https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/663371e557eba941c826e087_blog-1.jpg 1103w"
                                                     class="blog-related-image" /></a>
                                             <div class="blog-related-text-wrap"><a
-                                                    href="###/innovations-redefining-transportation"
+                                                    href="#"
                                                     class="blog-related-title">Innovations Redefining Transportation</a>
-                                                <div><a href="###-category/transport"
+                                                <div><a href="#"
                                                         class="blog-category-text">Transport</a></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div role="listitem" class="w-dyn-item">
                                         <div class="blog-related"><a
-                                                href="###/insights-into-future-transport-landscapes"
+                                                href="#"
                                                 class="blog-related-image-wrap w-inline-block"><img
                                                     src="https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/6633313ccf05dfc8ae857bb6_blog-3.jpg"
                                                     loading="lazy" alt="Blog image"
@@ -241,10 +249,10 @@ import Blogpreview from "../components/Blogpreview.astro";
                                                     srcset="https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/6633313ccf05dfc8ae857bb6_blog-3-p-500.jpg 500w, https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/6633313ccf05dfc8ae857bb6_blog-3-p-800.jpg 800w, https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/6633313ccf05dfc8ae857bb6_blog-3.jpg 1103w"
                                                     class="blog-related-image" /></a>
                                             <div class="blog-related-text-wrap"><a
-                                                    href="###/insights-into-future-transport-landscapes"
+                                                    href="#"
                                                     class="blog-related-title">Insights into Future Transport
                                                     Landscapes</a>
-                                                <div><a href="###-category/transport"
+                                                <div><a href="#"
                                                         class="blog-category-text">Transport</a></div>
                                             </div>
                                         </div>

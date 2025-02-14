@@ -14,28 +14,38 @@ import Hireus from "../components/Hireus.astro";
 import Blogpreview from "../components/Blogpreview.astro";
 import ServiceBanner from "../components/ServiceBanner.astro";
 import ClientLogo from "../components/ClientLogo.astro";
+
+import { allCompanyInformation } from "../lib/seoContent"
+
+const seoContent = await allCompanyInformation();
+
+const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
+
+
+
+
 ---
 <!DOCTYPE html>
-<!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Thu Aug 01 2024 11:45:50 GMT+0000 (Coordinated Universal Time) -->
-<html data-wf-domain="moversflow-template.webflow.io" data-wf-page="661caa5ae3dacb8bb23f4d0c"
+
+<html  data-wf-page="661caa5ae3dacb8bb23f4d0c"
     data-wf-site="661caa5ae3dacb8bb23f4d00" lang="en" data-wf-locale="en">
 
 <head>
     <meta charset="utf-8" />
-    <title>Marseville LTD</title>
+    <title>{seoContent[0].companyName}</title>
     <meta
-        content="Marseville Company Limited provides expert air conditioning solutions, including supply, installation, maintenance, and repairs for residential and commercial spaces in Nairobi. Explore our trusted brands—LG, GREE, LECOOL, and Samsung—for energy-efficient cooling. Contact us today!"
+        content={seoContent[0].seoDescription}
         name="description" />
-    <meta content="Marsevilleltd" property="og:title" />
+    <meta content={seoContent[0].companyName} property="og:title" />
     <meta
-        content="Marseville Company Limited provides expert air conditioning solutions, including supply, installation, maintenance, and repairs for residential and commercial spaces in Nairobi. Explore our trusted brands—LG, GREE, LECOOL, and Samsung—for energy-efficient cooling. Contact us today!"
+        content={seoContent[0].seoDescription}
         property="og:description" />
     <meta
         content="https://uhfawvmxqtznjbwhdkyx.supabase.co/storage/v1/object/public/content//brandLogo.jpg"
         property="og:image" />
-    <meta content="Marsevilleltd - " property="twitter:title" />
+    <meta content={seoContent[0].companyName} property="twitter:title" />
     <meta
-        content="Marseville Company Limited provides expert air conditioning solutions, including supply, installation, maintenance, and repairs for residential and commercial spaces in Nairobi. Explore our trusted brands—LG, GREE, LECOOL, and Samsung—for energy-efficient cooling. Contact us today!"
+        content={seoContent[0].seoDescription}
         property="twitter:description" />
     <meta
         content="https://uhfawvmxqtznjbwhdkyx.supabase.co/storage/v1/object/public/content//brandLogo.jpg"
@@ -43,7 +53,8 @@ import ClientLogo from "../components/ClientLogo.astro";
     <meta property="og:type" content="website" />
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="Webflow" name="generator" />
+   
+    <meta name="keywords" content={keywords} />
     <link
         href="styles/main.css"
         rel="stylesheet" type="text/css" />
@@ -107,7 +118,7 @@ import ClientLogo from "../components/ClientLogo.astro";
                     <div data-w-id="3022df5e-026c-049c-e103-f271d7d1ed91" style="opacity:0" class="hero-main-wrap">
                         <div class="hero-card-wrap">
                             <h1 class="hero-card-title">Reliable Air Conditioning Solutions in Nairobi</h1>
-                            <p class="hero-card-content">Providing top-quality air conditioning products and services for residential and commercial spaces. Trust Marseville to keep you cool and comfortable, no matter the climate.</p>
+                            <p class="hero-card-content">Providing top-quality air conditioning products and services for residential and commercial spaces. Trust {seoContent[0].companyName} to keep you cool and comfortable, no matter the climate.</p>
                             <div class="hero-button-wrap"><a data-w-id="3022df5e-026c-049c-e103-f271d7d1ed98"
                                     href="contact" class="main-button-link w-inline-block">
                                     <div>Get Started</div>
@@ -136,14 +147,6 @@ import ClientLogo from "../components/ClientLogo.astro";
                                                 </div>
                                             </a>
                                             </a>
-                                            <!-- <a href="contact" class="services-tab-link w-inline-block w-tab-link">
-                                                <div class="service-icon-wrap"><img
-                                                        src="https://uhfawvmxqtznjbwhdkyx.supabase.co/storage/v1/object/public/content//maintenance.svg"
-                                                        loading="lazy" alt="service tab icon" class="hero-service-icon" /></div>
-                                                <div class="service-text-wrap">
-                                                    <div>Maintenance Services</div>
-                                                </div>
-                                            </a> -->
                                             </a><a href="contact" class="services-tab-link w-inline-block w-tab-link">
                                                 <div class="service-icon-wrap"><img
                                                         src="https://uhfawvmxqtznjbwhdkyx.supabase.co/storage/v1/object/public/content//partnership.svg"
@@ -516,8 +519,8 @@ import ClientLogo from "../components/ClientLogo.astro";
                         <div data-w-id="3f370244-bddb-785b-afab-e34a0e65556f" style="opacity:0"
                             class="feedback-contact-wrap">
                             <h3 class="feedback-contact-title">Nairobi, Kenya</h3>
-                            <p class="contact-content">P.O BOX 59857 – 00200, Nairobi</p><a
-                                href="mailto:info@marsevilleltd.co.ke" class="feedback-contact-link">info@marsevilleltd.co.ke</a>
+                            <p class="contact-content">{seoContent[0].companyAddress}</p><a
+                                href={`mailto:${seoContent[0].companyEmail}`} class="feedback-contact-link">{seoContent[0].companyEmail}</a>
                             <div class="feedback-social-wrap"><a href="https://www.instagram.com/" target="_blank"
                                     class="feedback-social-link w-inline-block"><img
                                         src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/662ccf15a46ae80c0f84aea2_feedback-cta-social-1.svg"
@@ -543,7 +546,7 @@ import ClientLogo from "../components/ClientLogo.astro";
                             <div class="feedback-form-field-wrap"><label for="Phone-number"
                                     class="feedback-form-text-label">Phone Number</label><input
                                     class="feedback-form-field w-input" maxlength="256" name="Phone-number"
-                                    data-name="Phone number" placeholder="+63 085 64 7952" type="tel" id="Phone-number"
+                                    data-name="Phone number" placeholder={seoContent[0].companyPhone} type="tel" id="Phone-number"
                                     required="" /></div>
                                     <div class="feedback-form-field-wrap"><label for="Phone-number"
                                         class="feedback-form-text-label">Details</label><input

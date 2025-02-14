@@ -4,28 +4,34 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import { Image } from 'astro:assets';
 import customerCare from "../assets/images/customerCare.jpg";
+import { allCompanyInformation } from "../lib/seoContent"
+
+const seoContent = await allCompanyInformation();
+
+const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
+
 ---
 <!DOCTYPE html>
-<!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Thu Aug 01 2024 11:45:50 GMT+0000 (Coordinated Universal Time) -->
-<html data-wf-domain="moversflow-template.webflow.io" data-wf-page="662cd8706408cf2a4b60ec52"
+
+<html  data-wf-page="662cd8706408cf2a4b60ec52"
     data-wf-site="661caa5ae3dacb8bb23f4d00" lang="en" data-wf-locale="en">
 
 <head>
     <meta charset="utf-8" />
-    <title>Contact - Marsevilleltd</title>
+    <title>Contact - {seoContent[0].companyName}</title>
     <meta
-        content="Marseville Company Limited provides expert air conditioning solutions, including supply, installation, maintenance, and repairs for residential and commercial spaces in Nairobi. Explore our trusted brands—LG, GREE, LECOOL, and Samsung—for energy-efficient cooling. Contact us today!"
-        name="description" />
-    <meta content="Contact - Marsevilleltd" property="og:title" />
+        content={seoContent[0].seoDescription}
+        name="description"/>
+    <meta content={`Contact - ${seoContent[0].companyEmail}`}  property="og:title" />
     <meta
-        content="Marseville Company Limited provides expert air conditioning solutions, including supply, installation, maintenance, and repairs for residential and commercial spaces in Nairobi. Explore our trusted brands—LG, GREE, LECOOL, and Samsung—for energy-efficient cooling. Contact us today!"
+        content={seoContent[0].seoDescription}
         property="og:description" />
     <meta
         content="https://uhfawvmxqtznjbwhdkyx.supabase.co/storage/v1/object/public/content//brandLogo.jpg"
         property="og:image" />
-    <meta content="Contact - Marsevilleltd" property="twitter:title" />
+    <meta content={`Contact - ${seoContent[0].companyEmail}`} property="twitter:title" />
     <meta
-        content="Marseville Company Limited provides expert air conditioning solutions, including supply, installation, maintenance, and repairs for residential and commercial spaces in Nairobi. Explore our trusted brands—LG, GREE, LECOOL, and Samsung—for energy-efficient cooling. Contact us today!"
+        content={seoContent[0].seoDescription}
         property="twitter:description" />
     <meta
         content="https://uhfawvmxqtznjbwhdkyx.supabase.co/storage/v1/object/public/content//brandLogo.jpg"
@@ -33,7 +39,8 @@ import customerCare from "../assets/images/customerCare.jpg";
     <meta property="og:type" content="website" />
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="Webflow" name="generator" />
+   
+    <meta name="keywords" content={keywords} />
     <link
         href="styles/main.css"
         rel="stylesheet" type="text/css" />
@@ -72,22 +79,22 @@ import customerCare from "../assets/images/customerCare.jpg";
 
                     <div class="contact-link-wrap">
                         <p class="contact-link-text-title">Address :</p>
-                        <p class="contact-link-text">Mbagathi Way, Nyayo Highrise</p>
+                        <p class="contact-link-text">{seoContent[0].companyAddress}</p>
                         <p class="contact-link-text">Nairobi, Kenya</p>
                     </div>
                 </div>
                 <div data-w-id="6e86a264-9051-779b-8367-94992915480e" style="opacity:0" class="contact-wrap">
 
                     <div class="contact-link-wrap">
-                        <p class="contact-link-text-title">Contact :</p><a href="tel:+254702804812"
-                            class="contact-link-text contact-link">+254702804812</a>
+                        <p class="contact-link-text-title">Contact :</p><a href={`tel:${seoContent[0].companyPhone}`}
+                            class="contact-link-text contact-link">{seoContent[0].companyPhone}</a>
                     </div>
                 </div>
                 <div data-w-id="5d87910c-62ba-8bde-2f27-6ec1157a171b" style="opacity:0" class="contact-wrap">
   
                     <div class="contact-link-wrap">
-                        <p class="contact-link-text-title">Email :</p><a href="mailto:support@moverflow.com"
-                            class="contact-link-text contact-link">info@marsevilleltd.co.ke</a>
+                        <p class="contact-link-text-title">Email :</p><a href={`mailto:${seoContent[0].companyEmail}`} 
+                            class="contact-link-text contact-link">{seoContent[0].companyEmail}</a>
                     </div>
                 </div>
             </div>
@@ -121,7 +128,7 @@ import customerCare from "../assets/images/customerCare.jpg";
                                 <div class="contact-form-field-wrap"><label for="Contact-Phone"
                                         class="contact-form-field-label">Your Phone</label><input
                                         class="contact-text-field w-input" maxlength="256" name="Contact-Phone"
-                                        data-name="Contact Phone" placeholder="+1 234 567 890" type="tel"
+                                        data-name="Contact Phone" placeholder={seoContent[0].companyPhone} type="tel"
                                         id="Contact-Phone" required="" /></div>
                                 <div class="contact-form-field-wrap"><label for="Contact-Subject"
                                         class="contact-form-field-label">Service</label><input

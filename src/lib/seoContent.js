@@ -1,17 +1,21 @@
 import { useSanityClient, groq } from "astro-sanity";
 
-export async function allArticles() {
+export async function allCompanyInformation() {
     const query = groq`
-        *[_type == "blogPost"]{
-            title,
-            "slug": slug.current,
-            "coverImage": coverImage.asset->url,
-            date,
-            author,
-            excerpt,
-            content
+        *[_type == "companyInformation"] {
+            "companyName": companyName,
+            "companyAddress": companyAddress,
+            "companyPhone": companyPhone,
+            "companyEmail": companyEmail,
+            "companyWebsite": companyWebsite,
+            "mainImage": mainImage.asset->url,
+            publishedAt,
+            body,
+            seoTitle,
+            seoDescription,
+            seoKeywords
         }
     `;
-    const articles = await useSanityClient().fetch(query);
-    return articles;
+    const companyInfo = await useSanityClient().fetch(query);
+    return companyInfo;
 }

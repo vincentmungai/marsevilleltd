@@ -1,15 +1,19 @@
 ---
 import "../styles/main.css";
 
+import { allCompanyInformation } from "../lib/seoContent"
+
+const seoContent = await allCompanyInformation();
+
+
 ---
 <div class="hireus-badge">
     <div class="hireus-badge-wrap">
-        <p class="hireus-content" style="margin-top: 8px;">Connect with a Marseville Expert to learn what's best for you.<a
-                href="#" target="_blank" class="hireus-link">Learn More</a>
+        <p class="hireus-content" style="margin-top: 8px;">Connect with a {seoContent[0].companyName} Expert to learn what's best for you.
         </p>
         <div class="hireus-button-wrap"><a href="contact" target="_blank"
                 class="hireus-orange-button w-button">Schedule A Call<br /></a><a
-                href="tel:+254702804812" target="_blank"
+                href={`tel:${seoContent[0].companyPhone}`} target="_blank"
                 class="get-a-quote-button w-inline-block">
                 <div class="get-a-quote-button-wrap">
                     <div>Call Now</div>

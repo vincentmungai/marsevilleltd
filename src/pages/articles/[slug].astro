@@ -6,6 +6,12 @@ import Blogpreview from "../../components/Blogpreview.astro";
 import personPlaceholder from "../../assets/images/person-placeholder.jpg";
 import acBlogImage from "../../assets/images/acBlogImage.avif";
 import { Image } from 'astro:assets';
+import { allCompanyInformation } from "../../lib/seoContent"
+
+const seoContent = await allCompanyInformation();
+
+const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
+
 
 import { allArticles } from "../../lib/allArticles";
 
@@ -24,28 +30,28 @@ const { article } = Astro.props;
 
 ---
 <!DOCTYPE html>
-<html data-wf-domain="moversflow-template.webflow.io" data-wf-page="6633225d7125979f5ae634f6"
+<html  data-wf-page="6633225d7125979f5ae634f6"
     data-wf-site="661caa5ae3dacb8bb23f4d00" lang="en" data-wf-locale="en" data-wf-collection="6633225d7125979f5ae634ab"
     data-wf-item-slug="navigating-tomorrows-transport-challenges">
 
 <head>
     <meta charset="utf-8" />
-    <title>AC solutions - Marsevilleltd</title>
+    <title>AC solutions - {seoContent[0].companyName}</title>
     <meta
-        content="Marseville Company Limited provides expert air conditioning solutions, including supply, installation, maintenance, and repairs for residential and commercial spaces in Nairobi. Explore our trusted brands—LG, GREE, LECOOL, and Samsung—for energy-efficient cooling. Contact us today!."
+        content={seoContent[0].seoDescription}
         name="description" />
-    <meta content="Marseville Company Limited provides expert air conditioning solutions, including supply, installation, maintenance, and repairs for residential and commercial spaces in Nairobi. Explore our trusted brands—LG, GREE, LECOOL, and Samsung—for energy-efficient cooling. Contact us today!"
+    <meta content={seoContent[0].seoDescription}
         property="og:title" />
     <meta
-        content="Marseville Company Limited provides expert air conditioning solutions, including supply, installation, maintenance, and repairs for residential and commercial spaces in Nairobi. Explore our trusted brands—LG, GREE, LECOOL, and Samsung—for energy-efficient cooling. Contact us today!"
+        content={seoContent[0].seoDescription}
         property="og:description" />
     <meta
         content="https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/663371bc893ea851424cc907_blog-featured-single.jpg"
         property="og:image" />
-    <meta content="Marseville Company Limited provides expert air conditioning solutions, including supply, installation, maintenance, and repairs for residential and commercial spaces in Nairobi. Explore our trusted brands—LG, GREE, LECOOL, and Samsung—for energy-efficient cooling. Contact us today!"
+    <meta content={seoContent[0].seoDescription}
         property="twitter:title" />
     <meta
-        content="Marseville Company Limited provides expert air conditioning solutions, including supply, installation, maintenance, and repairs for residential and commercial spaces in Nairobi. Explore our trusted brands—LG, GREE, LECOOL, and Samsung—for energy-efficient cooling. Contact us today!"
+        content={seoContent[0].seoDescription}
         property="twitter:description" />
     <meta
         content="https://cdn.prod.website-files.com/66331283225e5eeee747c0b1/663371bc893ea851424cc907_blog-featured-single.jpg"
@@ -53,7 +59,8 @@ const { article } = Astro.props;
     <meta property="og:type" content="website" />
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="Webflow" name="generator" />
+   
+    <meta name="keywords" content={keywords} />
     <link
         href="styles/main.css"
         rel="stylesheet" type="text/css" />
@@ -156,7 +163,7 @@ const { article } = Astro.props;
                         <div class="transport-list-wrap">
                             <div class="w-dyn-list">
                                 <div role="list" class="w-dyn-items">
-                                    <div role="listitem" class="w-dyn-item"><a href="###-category/transport"
+                                    <div role="listitem" class="w-dyn-item"><a href="#"
                                             class="service-transport-link w-inline-block">
                                             <div class="transport-link-icon-wrap"><img
                                                     src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/663388834875ba4eba1a1452_service-link%20-icon.svg"
@@ -164,7 +171,7 @@ const { article } = Astro.props;
     " class="transport-link-icon" /></div>
                                             <div>Transport</div>
                                         </a></div>
-                                    <div role="listitem" class="w-dyn-item"><a href="###-category/shipping"
+                                    <div role="listitem" class="w-dyn-item"><a href="#"
                                             class="service-transport-link w-inline-block">
                                             <div class="transport-link-icon-wrap"><img
                                                     src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/663388834875ba4eba1a1452_service-link%20-icon.svg"
@@ -172,7 +179,7 @@ const { article } = Astro.props;
     " class="transport-link-icon" /></div>
                                             <div>Shipping</div>
                                         </a></div>
-                                    <div role="listitem" class="w-dyn-item"><a href="###-category/insights"
+                                    <div role="listitem" class="w-dyn-item"><a href="#"
                                             class="service-transport-link w-inline-block">
                                             <div class="transport-link-icon-wrap"><img
                                                     src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/663388834875ba4eba1a1452_service-link%20-icon.svg"
