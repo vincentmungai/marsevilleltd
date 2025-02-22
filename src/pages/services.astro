@@ -30,14 +30,14 @@ const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
         content={seoContent[0].seoDescription}
         property="og:description" />
     <meta
-        content="https://uhfawvmxqtznjbwhdkyx.supabase.co/storage/v1/object/public/content//brandLogo.jpg"
+        content={seoContent[0].companyBanner}
         property="og:image" />
     <meta content={`Services - ${seoContent[0].companyEmail}`} property="twitter:title" />
     <meta
         content={seoContent[0].seoDescription}
         property="twitter:description" />
     <meta
-        content="https://uhfawvmxqtznjbwhdkyx.supabase.co/storage/v1/object/public/content//brandLogo.jpg"
+        content={seoContent[0].companyBanner}
         property="twitter:image" />
     <meta property="og:type" content="website" />
     <meta content="summary_large_image" name="twitter:card" />

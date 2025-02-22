@@ -2,13 +2,17 @@
 import { Image } from 'astro:assets';
 import "../styles/main.css";
 import brandLogo from "../assets/images/brandLogo.png";
+
+import { allCompanyInformation } from "../lib/seoContent"
+
+const seoContent = await allCompanyInformation();
 ---
 <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease"
                 data-easing2="ease" role="banner" class="nav-bar w-nav">
                 <div class="large-container w-container">
                     <div class="nav-wrap"><a href="/" aria-current="page"
-                            class="brand-link w-nav-brand w--current"><Image style="height: 80px; width: auto;"
-                                src={brandLogo}
+                            class="brand-link w-nav-brand w--current"><Image inferSize style="height: 80px; width: auto;"
+                                src={seoContent[0].companyLogo}
                                 loading="lazy" alt="Brand Logo" /></a>
                         <nav role="navigation" class="nav-menu w-nav-menu">
                             <div class="nav-menu-list-wrap"><a href="/" aria-current="page"

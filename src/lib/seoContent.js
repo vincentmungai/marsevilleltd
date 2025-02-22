@@ -9,6 +9,8 @@ export async function allCompanyInformation() {
             "companyEmail": companyEmail,
             "companyWebsite": companyWebsite,
             "mainImage": mainImage.asset->url,
+            "companyBanner": CompanyBanner.asset->url,
+            "companyLogo": CompanyLogo.asset->url,
             publishedAt,
             body,
             seoTitle,
