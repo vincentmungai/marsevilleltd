@@ -13,11 +13,10 @@
     "@sanity/astro": "^3.0.1",
     "@sanity/client": "^6.28.0",
     "@sanity/visual-editing": "^2.13.2",
-    "astro": "^5.2.5",
+    "astro": "^4.16.18",
     "astro-compress": "^2.3.6",
     "astro-portabletext": "^0.10.1",
     "astro-sanity": "^1.1.7",
-    "react": "^19.0.0",
     "sanity": "^2.36.6",
     "vite-plugin-compression": "^0.5.1"
   }
