@@ -6,6 +6,7 @@ import sitemap from '@astrojs/sitemap';
 import viteCompression from 'vite-plugin-compression';
 
 export default defineConfig({
+  site: 'https://your-domain.com', // Replace with your actual domain
   integrations: [
     sanity({
       projectId: '9bcnrig2',
@@ -19,9 +20,9 @@ export default defineConfig({
   vite: {
     plugins: [
       viteCompression({
-        algorithm: 'gzip',      // Options include 'gzip' and 'brotliCompress'
-        threshold: 10240,       // Only compress files larger than 10KB
-        deleteOriginFile: false // Keep original uncompressed files
+        algorithm: 'gzip',      
+        threshold: 10240,       
+        deleteOriginFile: false 
       }),
     ],
   },
