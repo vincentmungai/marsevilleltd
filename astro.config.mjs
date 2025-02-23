@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 import viteCompression from 'vite-plugin-compression';
 
 export default defineConfig({
-  site: 'https://your-domain.com', // Replace with your actual domain
+  site: 'https://www.marsevilleltd.co.ke', // Updated base URL
   integrations: [
     sanity({ 
       projectId: '9bcnrig2',
