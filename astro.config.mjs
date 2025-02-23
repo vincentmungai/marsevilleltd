@@ -8,7 +8,7 @@ import viteCompression from 'vite-plugin-compression';
 export default defineConfig({
   site: 'https://your-domain.com', // Replace with your actual domain
   integrations: [
-    sanity({
+    sanity({ 
       projectId: '9bcnrig2',
       dataset: 'production',
       apiVersion: '2021-03-25',
