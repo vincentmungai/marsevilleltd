@@ -2,9 +2,7 @@
 import "../../styles/main.css";
 import Navbar from "../../components/Navbar.astro";
 import Footer from "../../components/Footer.astro";
-import Blogpreview from "../../components/Blogpreview.astro";
 import personPlaceholder from "../../assets/images/person-placeholder.jpg";
-import acBlogImage from "../../assets/images/acBlogImage.avif";
 import { Image } from 'astro:assets';
 import { allCompanyInformation } from "../../lib/seoContent"
 
@@ -205,7 +203,7 @@ const { article } = Astro.props;
                                 <div role="list" class="w-dyn-items">
                                     
                                     {
-                                        articles.map((article: { title: string }) => (
+                                        articles.map((article: { title: string, coverImage: string, slug: string }) => (
                                         <div role="listitem" class="w-dyn-item">
                                         <div class="blog-related"><a href={`../articles/${article.slug}`}
                                                 class="blog-related-image-wrap w-inline-block"><img
