@@ -2,6 +2,7 @@
 import "../styles/main.css";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import Accordion from "../components/Accordion/Primary.astro";
 import { Image } from 'astro:assets';
 import customerCare from "../assets/images/customerCare.jpg";
 import { allCompanyInformation } from "../lib/seoContent"
@@ -71,7 +72,7 @@ const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
     <section class="banner-section">
         <div class="w-layout-blockcontainer container w-container">
             <div class="banner-wrap">
-                <div data-w-id="c0a18700-9b76-6b85-e93b-4ea49e796bd2" style="opacity:0"
+                <div data-w-id="c0a18700-9b76-6b85-e93b-4ea49e796bd2" style="Opacity:1"
                     class="pricng-banner-title-wrap">
                     <h1 class="banner-title">Get in Touch</h1>
                     <div class="pricing-banner-content-wrap">
@@ -85,7 +86,7 @@ const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
     <section class="contact-section">
         <div class="w-layout-blockcontainer container w-container">
             <div class="contact-whole-wrap">
-                <div data-w-id="d1ddec97-f97d-6920-41b7-6bfc91609919" style="opacity:0" class="contact-wrap">
+                <div data-w-id="d1ddec97-f97d-6920-41b7-6bfc91609919" style="Opacity:1" class="contact-wrap">
 
                     <div class="contact-link-wrap">
                         <p class="contact-link-text-title">Address :</p>
@@ -93,14 +94,14 @@ const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
                         <p class="contact-link-text">Nairobi, Kenya</p>
                     </div>
                 </div>
-                <div data-w-id="6e86a264-9051-779b-8367-94992915480e" style="opacity:0" class="contact-wrap">
+                <div data-w-id="6e86a264-9051-779b-8367-94992915480e" style="Opacity:1" class="contact-wrap">
 
                     <div class="contact-link-wrap">
                         <p class="contact-link-text-title">Contact :</p><a href={`tel:${seoContent[0].companyPhone}`}
                             class="contact-link-text contact-link">{seoContent[0].companyPhone}</a>
                     </div>
                 </div>
-                <div data-w-id="5d87910c-62ba-8bde-2f27-6ec1157a171b" style="opacity:0" class="contact-wrap">
+                <div data-w-id="5d87910c-62ba-8bde-2f27-6ec1157a171b" style="Opacity:1" class="contact-wrap">
   
                     <div class="contact-link-wrap">
                         <p class="contact-link-text-title">Email :</p><a href={`mailto:${seoContent[0].companyEmail}`} 
@@ -113,9 +114,9 @@ const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
     <section class="contact-form-section">
         <div class="w-layout-blockcontainer container w-container">
             <div class="contact-form-wrap">
-                <div data-w-id="53f0ab50-1685-4920-786f-5b867f021b77" style="opacity:0" class="contact-image-wrap">
+                <div data-w-id="53f0ab50-1685-4920-786f-5b867f021b77" style="Opacity:1" class="contact-image-wrap">
                     <Image src={customerCare}loading="eager" alt="contact section image" class="conatct-form-image" style="height: 400px; width: auto; object-fit: cover; object-position: right center;"/></div>
-                <div data-w-id="168ab24b-9554-ef99-5f94-1ee98a2ad137" style="opacity:0" class="contact-form-whole-wrap">
+                <div data-w-id="168ab24b-9554-ef99-5f94-1ee98a2ad137" style="Opacity:1" class="contact-form-whole-wrap">
                     <div class="contact-form-block w-form">
                         <form action="https://api.web3forms.com/submit" id="wf-form-Contact-Email-Form" name="wf-form-Contact-Email-Form"
                             data-name="Contact Email Form" method="POST" class="contact-form"
@@ -157,13 +158,13 @@ const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
                                 </div><input type="checkbox" name="By-clicking-on-this-button-I-agree-to-the-processi-2"
                                     id="By-clicking-on-this-button-I-agree-to-the-processi-2"
                                     data-name="By Clicking On This Button I Agree To The Processi 2"
-                                    style="opacity:0;position:absolute;z-index:-1" /><span
+                                    style="Opacity:1;position:absolute;z-index:-1" /><span
                                     class="feedback-checkbox-label w-form-label"
                                     for="By-clicking-on-this-button-I-agree-to-the-processi-2">By clicking on this
                                     button, I agree to the process</span>
                             </label>
                             <div class="contact-form-button-wrap"><input type="submit" data-wait="Please wait..."
-                                    class="secondary-button w-button" value="Submit Request" /></div>
+                                    class="secondary-button w-button" value="Submit" style="color: white !important; /></div>
                         </form>
                         <div class="success-message w-form-done">
                             <div>Thank you! Your submission has been received!</div>
@@ -176,89 +177,7 @@ const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
             </div>
         </div>
     </section>
-    <section class="faq-section contact">
-        <div class="w-layout-blockcontainer container w-container">
-            <div class="faq-wrap">
-                <div data-w-id="61c8800a-5d2e-afec-780c-397b0cd33737" class="faq-title-wrap">
-                    <h2 class="section-title">Frequently Asked Questions</h2>
-                    <p class="section-content">Explore answers to common inquiries about our Air Conditioning services here.
-                    </p>
-                </div>
-                <div data-w-id="61c8800a-5d2e-afec-780c-397b0cd3373c" class="faq-main-wrap">
-                    <div data-hover="false" data-delay="0" data-w-id="61c8800a-5d2e-afec-780c-397b0cd3373d"
-                        class="faq w-dropdown">
-                        <div class="faq-toggle top w-dropdown-toggle">
-                            <div>What areas do you serve?</div>
-                            <div class="faq-icon-wrap"><img
-                                    src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/662bee41b1ecfbffc0c320f9_faq-arrrow.svg"
-                                    loading="lazy" alt="faq arrow" class="faq-icon" /></div>
-                        </div>
-                        <nav class="faq-list w-dropdown-list">
-                            <div class="faq-answer-wrap">
-                                <p class="faq-content">We provide air conditioning installation, maintenance, and repair services across Nairobi. Contact us to check availability in your location.</p>
-                            </div>
-                        </nav>
-                    </div>
-                    <div data-hover="false" data-delay="0" data-w-id="61c8800a-5d2e-afec-780c-397b0cd33747"
-                        class="faq w-dropdown">
-                        <div class="faq-toggle w-dropdown-toggle">
-                            <div>How do I schedule a service?</div>
-                            <div class="faq-icon-wrap"><img
-                                    src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/662bee41b1ecfbffc0c320f9_faq-arrrow.svg"
-                                    loading="lazy" alt="faq arrow" class="faq-icon" /></div>
-                        </div>
-                        <nav class="faq-list w-dropdown-list">
-                            <div class="faq-answer-wrap">
-                                <p class="faq-content">Booking is easy! You can schedule an appointment through our website, call our customer service team, or send us a message via email.</p>
-                            </div>
-                        </nav>
-                    </div>
-                    <div data-hover="false" data-delay="0" data-w-id="61c8800a-5d2e-afec-780c-397b0cd33751"
-                        class="faq w-dropdown">
-                        <div class="faq-toggle w-dropdown-toggle">
-                            <div>Are there size limitations for AC units?</div>
-                            <div class="faq-icon-wrap"><img
-                                    src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/662bee41b1ecfbffc0c320f9_faq-arrrow.svg"
-                                    loading="lazy" alt="faq arrow" class="faq-icon" /></div>
-                        </div>
-                        <nav class="faq-list w-dropdown-list">
-                            <div class="faq-answer-wrap">
-                                <p class="faq-content">We service and install all types of AC units, from small residential systems to large commercial cooling solutions. If you're unsure, our experts can recommend the best option for your space.</p>
-                            </div>
-                        </nav>
-                    </div>
-                    <div data-hover="false" data-delay="0" data-w-id="61c8800a-5d2e-afec-780c-397b0cd3375b"
-                        class="faq w-dropdown">
-                        <div class="faq-toggle w-dropdown-toggle">
-                            <div>What is your cancellation policy?</div>
-                            <div class="faq-icon-wrap"><img
-                                    src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/662bee41b1ecfbffc0c320f9_faq-arrrow.svg"
-                                    loading="lazy" alt="faq arrow" class="faq-icon" /></div>
-                        </div>
-                        <nav class="faq-list w-dropdown-list">
-                            <div class="faq-answer-wrap">
-                                <p class="faq-content">We offer flexible cancellations with at least [X] hours' notice. Late cancellations may be subject to a small fee. Contact us for details.</p>
-                            </div>
-                        </nav>
-                    </div>
-                    <div data-hover="false" data-delay="0" data-w-id="61c8800a-5d2e-afec-780c-397b0cd33765"
-                        class="faq w-dropdown">
-                        <div class="faq-toggle w-dropdown-toggle">
-                            <div>Do you offer warranty or insurance options?</div>
-                            <div class="faq-icon-wrap"><img
-                                    src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/662bee41b1ecfbffc0c320f9_faq-arrrow.svg"
-                                    loading="lazy" alt="faq arrow" class="faq-icon" /></div>
-                        </div>
-                        <nav class="faq-list w-dropdown-list">
-                            <div class="faq-answer-wrap">
-                                <p class="faq-content">Yes! We provide warranty coverage on installations and repairs. Additionally, we offer maintenance plans to keep your AC running efficiently year-round.</p>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <Accordion>
     <Footer/>
     
     <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=661caa5ae3dacb8bb23f4d00"

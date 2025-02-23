@@ -10,6 +10,7 @@ import Blogpreview from "../components/Blogpreview.astro";
 import ClientLogo from "../components/ClientLogo.astro";
 
 import { allCompanyInformation } from "../lib/seoContent"
+import PrimaryButton from "../components/Buttons/PrimaryButton.astro";
 
 const seoContent = await allCompanyInformation();
 
@@ -82,17 +83,7 @@ const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
                         <h1 class="banner-title">Leading the Future of Cooling Technology</h1>
                     </div>
                     <p class="banner-content">Transforming the air conditioning industry with innovative solutions and energy-efficient strategies for optimal comfort.</p>
-                    <div class="banner-button-wrap"><a data-w-id="6266cd12-bbbf-8f95-b9eb-31631f22c2a2" href="contact"
-                            class="main-button-link w-inline-block">
-                            <div>Get Started</div>
-                            <div class="button-icon-wrap">
-                                <div style="-webkit-transform:translate3d(3px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0);-moz-transform:translate3d(3px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0);-ms-transform:translate3d(3px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0);transform:translate3d(3px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0)"
-                                    class="button-icon icon-one"></div>
-                                <div style="-webkit-transform:translate3d(5px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0);-moz-transform:translate3d(5px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0);-ms-transform:translate3d(5px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0);transform:translate3d(5px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0)"
-                                    class="button-icon icon-two"></div>
-                                <div style="background-color:rgb(255,255,255)" class="button-icon"></div>
-                            </div>
-                        </a></div>
+                   <PrimaryButton text="Contact Us" href="/contact" />
                 </div>
                 <div data-w-id="6266cd12-bbbf-8f95-b9eb-31631f22c2a9" style="opacity:1" class="about-banner-image-wrap">
                     <Image src={acTechnology}
@@ -156,7 +147,7 @@ const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
                         src={acClient}
                         loading="lazy"
                         alt="about image" class="mission-image" style="max-height: 500px; max-width: 390px; object-fit: cover;"/>
-                    <div style="width:100%;height:100%;background-color:rgb(255,215,54)" class="mission-image-overlay">
+                    <div style="width:100%;height:100%;" class="mission-image-overlay">
                     </div>
                 </div>
             </div>
@@ -170,17 +161,7 @@ const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
                 <div data-w-id="51754467-b8b3-2b74-8047-59b3de75508a" style="opacity:1" class="pricing-title-wrap">
                     <h2 class="section-title">Top notch services for all our clients</h2>
                     <p class="section-content">Experience reliable and energy-efficient air conditioning solutions at competitive prices, delivering exceptional value and comfort for your space.</p>
-                    <div class="pricing-button-wrap"><a data-w-id="6bab986e-5d61-4998-a395-a3a858456f45" href="/blog"
-                            class="main-button-link w-inline-block">
-                            <div>Get Started</div>
-                            <div class="button-icon-wrap">
-                                <div style="-webkit-transform:translate3d(3px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0);-moz-transform:translate3d(3px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0);-ms-transform:translate3d(3px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0);transform:translate3d(3px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0)"
-                                    class="button-icon icon-one"></div>
-                                <div style="-webkit-transform:translate3d(5px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0);-moz-transform:translate3d(5px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0);-ms-transform:translate3d(5px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0);transform:translate3d(5px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0)"
-                                    class="button-icon icon-two"></div>
-                                <div style="background-color:rgb(255,255,255)" class="button-icon"></div>
-                            </div>
-                        </a></div>
+                    <PrimaryButton text="Contact Us" href="/contact" />
                 </div>
                 <div class="pricing-card-whole-wrap">
                     <div data-w-id="416de2b8-5392-0151-68bc-7ca3f999dac1" style="opacity:1" class="pricing-card">

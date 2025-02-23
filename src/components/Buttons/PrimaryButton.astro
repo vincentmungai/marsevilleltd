@@ -1,0 +1,20 @@
+---
+import "../../styles/main.css"
+export interface ButtonProps {
+  text: string;
+  href: string;
+}
+
+const { text, href } = Astro.props as ButtonProps;
+---
+<div class="banner-button-wrap"><a data-w-id="6266cd12-bbbf-8f95-b9eb-31631f22c2a2" href={href}
+    class="main-button-link w-inline-block">
+    <div>{text}</div>
+    <div class="button-icon-wrap">
+        <div style="-webkit-transform:translate3d(3px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0);-moz-transform:translate3d(3px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0);-ms-transform:translate3d(3px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0);transform:translate3d(3px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0)"
+            class="button-icon icon-one"></div>
+        <div style="-webkit-transform:translate3d(5px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0);-moz-transform:translate3d(5px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0);-ms-transform:translate3d(5px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0);transform:translate3d(5px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-45deg, 0)"
+            class="button-icon icon-two"></div>
+        <div style="background-color:rgb(255,255,255)" class="button-icon"></div>
+    </div>
+</a></div>

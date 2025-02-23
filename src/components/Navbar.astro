@@ -4,6 +4,7 @@ import "../styles/main.css";
 import brandLogo from "../assets/images/brandLogo.png";
 
 import { allCompanyInformation } from "../lib/seoContent"
+import PrimaryButton from './Buttons/PrimaryButton.astro';
 
 const seoContent = await allCompanyInformation();
 ---
@@ -21,15 +22,7 @@ const seoContent = await allCompanyInformation();
                                     class="nav-menu-link w-nav-link">Services</a>
                                 <a href="/blog" class="nav-menu-link w-nav-link">Blog</a>
                             </div>
-                            <div class="nav-button-wrap"><a data-w-id="0c314794-299f-f362-76f5-af541b0bb628"
-                                    href="/contact" class="main-button-link w-inline-block">
-                                    <div>Get Started</div>
-                                    <div class="button-icon-wrap">
-                                        <div class="button-icon icon-one"></div>
-                                        <div class="button-icon icon-two"></div>
-                                        <div class="button-icon"></div>
-                                    </div>
-                                </a></div>
+                            <PrimaryButton text="Contact Us" href="/contact" />
                         </nav>
                         <div class="menu-button w-nav-button">
                             <div class="w-icon-nav-menu"></div>

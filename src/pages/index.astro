@@ -10,12 +10,14 @@ import { Image } from 'astro:assets';
 import brandLogo from "../assets/images/brandLogo.png";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import Feedback from "../components/Feedback.astro";
 import Hireus from "../components/Hireus.astro";
 import Blogpreview from "../components/Blogpreview.astro";
 import ServiceBanner from "../components/ServiceBanner.astro";
 import ClientLogo from "../components/ClientLogo.astro";
 
 import { allCompanyInformation } from "../lib/seoContent"
+import PrimaryButton from "../components/Buttons/PrimaryButton.astro";
 
 const seoContent = await allCompanyInformation();
 
@@ -126,19 +128,11 @@ const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
             </div>
             <div class="w-layout-blockcontainer large-container w-container">
                 <div class="hero-wrap">
-                    <div data-w-id="3022df5e-026c-049c-e103-f271d7d1ed91" style="opacity:0" class="hero-main-wrap">
+                    <div style="Opacity:1" class="hero-main-wrap">
                         <div class="hero-card-wrap">
                             <h1 class="hero-card-title">Reliable Air Conditioning Solutions in Nairobi</h1>
                             <p class="hero-card-content">Providing top-quality air conditioning products and services for residential and commercial spaces. Trust {seoContent[0].companyName} to keep you cool and comfortable, no matter the climate.</p>
-                            <div class="hero-button-wrap"><a data-w-id="3022df5e-026c-049c-e103-f271d7d1ed98"
-                                    href="contact" class="main-button-link w-inline-block">
-                                    <div>Get Started</div>
-                                    <div class="button-icon-wrap">
-                                        <div class="button-icon icon-one"></div>
-                                        <div class="button-icon icon-two"></div>
-                                        <div style="background-color:rgb(255,255,255)" class="button-icon"></div>
-                                    </div>
-                                </a></div>
+                            <PrimaryButton text="Contact Us" href="contact" />
                                 <div class="hero-tabs-wrap">
                                     <!-- <h2 class="hero-form-title">Check Availability</h2> -->
                                     
@@ -221,10 +215,10 @@ const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
             <div class="transport-wrap">
                 <div class="transport-image-wrap"><Image class="transport-image"
                         src={acUnitImage}
-                        alt="transport images" style="opacity:0"
+                        alt="transport images" style="Opacity:1"
                         data-w-id="c91ad33b-993b-94ef-248d-3d3e3c55a5e5" loading="lazy"/>
                 </div>
-                <div data-w-id="8e086243-983e-1145-2dfe-e297fd0d7b8c" style="opacity:0" class="transport-content-wrap">
+                <div data-w-id="8e086243-983e-1145-2dfe-e297fd0d7b8c" style="Opacity:1" class="transport-content-wrap">
                     <div class="transport-title-wrap">
                         <h2 class="transport-title">Expert Installation Services</h2>
                     </div>
@@ -234,7 +228,7 @@ const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
             </div>
             <div class="transport-section-line-break"></div>
             <div class="transport-wrap">
-                <div data-w-id="f9d7c679-3dcd-2e22-a68e-7ff417487a2e" style="opacity:0"
+                <div data-w-id="f9d7c679-3dcd-2e22-a68e-7ff417487a2e" style="Opacity:1"
                     class="transport-content-wrap right-align">
                     <div class="transport-title-wrap">
                         <h2 class="transport-title">Comprehensive Maintenance Plans</h2>
@@ -243,7 +237,7 @@ const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
                       </div>
                 <div class="transport-image-wrap"><Image class="transport-image"
                     src={acUnitImage2}
-                    alt="transport images" style="opacity:0"
+                    alt="transport images" style="Opacity:1"
                     data-w-id="c91ad33b-993b-94ef-248d-3d3e3c55a5e5" loading="lazy"/>
             </div>
             </div>
@@ -251,10 +245,10 @@ const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
             <div class="transport-wrap">
                 <div class="transport-image-wrap"><Image class="transport-image"
                     src={acUnitImage}
-                    alt="transport images" style="opacity:0"
+                    alt="transport images" style="Opacity:1"
                     data-w-id="c91ad33b-993b-94ef-248d-3d3e3c55a5e5" loading="lazy"/>
             </div>
-                <div data-w-id="c3e36edb-6801-c564-d66f-61622f6605bd" style="opacity:0" class="transport-content-wrap">
+                <div data-w-id="c3e36edb-6801-c564-d66f-61622f6605bd" style="Opacity:1" class="transport-content-wrap">
                     <div class="transport-title-wrap">
                         <h2 class="transport-title">Swift Repair Solutions</h2>
                     </div>
@@ -264,26 +258,17 @@ const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
             </div>
             <div class="transport-section-line-break"></div>
             <div class="transport-wrap">
-                <div data-w-id="dca7c44f-ec91-6cde-673f-aa5246482fee" style="opacity:0"
+                <div data-w-id="dca7c44f-ec91-6cde-673f-aa5246482fee" style="Opacity:1"
                     class="transport-content-wrap right-align">
                     <div class="transport-title-wrap">
                         <h2 class="transport-title">Premium Product Range</h2>
                     </div>
                     <p class="transport-content">Explore top air conditioning brands, including LG, GREE, LECOOL, and Samsung, for high-quality and energy-efficient cooling solutions.</p>
-                    <div class="transport-button-wrap"><a data-w-id="ec6f2cd9-115e-8e1f-f923-8d2b4ca7487e"
-                            href="contact" class="main-button-link w-inline-block">
-                            <div>Get Started</div>
-                            <div class="button-icon-wrap">
-                                <div 
-                                    class="button-icon icon-one"></div>
-                                <div class="button-icon icon-two"></div>
-                                <div style="background-color:rgb(255,255,255)" class="button-icon"></div>
-                            </div>
-                        </a></div>
+                    <PrimaryButton text="Contact Us" href="/contact" />
                 </div>
                 <div class="transport-image-wrap"><Image class="transport-image"
                     src={acUnitImage2}
-                    alt="transport images" style="opacity:0"
+                    alt="transport images" style="Opacity:1"
                     data-w-id="c91ad33b-993b-94ef-248d-3d3e3c55a5e5" loading="lazy"/>
             </div>
             </div>
@@ -295,7 +280,7 @@ const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
             <div class="about-main-wrap">
                 
                 <div class="about-wrap bottom-wrap">
-                    <div data-w-id="78a40140-fed6-6e34-e61d-c0c6f2f962ed" style="opacity:0"
+                    <div style="Opacity:1"
                         class="about-content-wrap about-bottom-wrap">
                         <div class="about-content-title-wrap">
                             <h2 class="section-title white-text">Quality service, customer satisfaction our priority.
@@ -337,7 +322,7 @@ const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
                                 </div>
                             </div>
                         </div>
-                        <div class="about-button-link-wrap"><a data-w-id="fbaaa384-3f32-fc3e-199c-0e06a4184bee"
+                        <div class="about-button-link-wrap"><a
                                 href="contact" class="main-button-link w-inline-block">
                                 <div>Request Instant Quotes</div>
                                 <div class="button-icon-wrap">
@@ -352,245 +337,13 @@ const keywords = seoContent[0]?.seoKeywords?.join(", ") || "";
                     </div>
                     <div class="about-image-wrap home-about-two"><Image
                             src={maintenanceTech}
-                            loading="lazy" style="opacity:0" data-w-id="78a40140-fed6-6e34-e61d-c0c6f2f96317"
+                            loading="lazy" style="Opacity:1"    
                             alt="home about image" class="about-wrap-image" style="max-height:350px; max-width: 390px; object-fit: cover;"/></div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="feedback-cta-section">
-        <div class="w-layout-blockcontainer container w-container">
-            <div data-delay="4000" data-animation="slide" class="testimonial-slider w-slider" data-autoplay="false"
-                data-easing="ease" data-hide-arrows="false" data-disable-swipe="false"
-                data-w-id="7b91daf9-65cb-2ce8-c934-2b32f82a47fc" data-autoplay-limit="0" data-nav-spacing="3"
-                data-duration="500" data-infinite="true">
-                <div class="testimonial-mask w-slider-mask">
-                    <div class="testimonial-slide w-slide">
-                        <div class="testimonial-wrap">
-                            <div class="testimonial-image-wrap"><Image
-                                src={brandLogo}
-                                    loading="lazy"
-                                    sizes="(max-width: 479px) 64vw, (max-width: 767px) 52vw, (max-width: 991px) 280px, 330px"
-                                    alt="testimonial image" class="testimonial-image" /></div>
-                            <div class="testimonial-line-break-icon-wrap"><img
-                                    src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e652e9b293ab953e08bf8_testimonial-line-break-icon.svg"
-                                    loading="lazy" alt="testimonial image" class="testimonial-line-break-icon" /></div>
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-top-content-wrap">
-                                    <div class="testimonial-quote-icon-wrap"><img
-                                            src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e65f9ca7705e44c8ac02c_testimonial-quote-icon.svg"
-                                            loading="lazy" alt="quote image
-    " class="testimonial-quote-icon" /></div>
-                                    <h3 class="testimonial-main-content">Consistently reliable and prompt service.
-                                        Professional and courteous customer service. Highly recommended for all your
-                                        Air Conditioning needs.</h3>
-                                </div>
-                                <div class="testimonial-details-wrap">
-                                    <h3 class="testimonial-author-name">Vincent Mungai</h3>
-                                    <p class="testimonial-details-content">Home Owner</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-slide w-slide">
-                        <div class="testimonial-wrap">
-                            <div class="testimonial-image-wrap"><Image
-                                src={brandLogo}
-                                    loading="lazy"
-                                    sizes="(max-width: 479px) 64vw, (max-width: 767px) 52vw, (max-width: 991px) 280px, 330px"
-                                    alt="testimonial image" class="testimonial-image" /></div>
-                            <div class="testimonial-line-break-icon-wrap"><img
-                                    src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e652e9b293ab953e08bf8_testimonial-line-break-icon.svg"
-                                    loading="lazy" alt="testimonial image" class="testimonial-line-break-icon" /></div>
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-top-content-wrap">
-                                    <div class="testimonial-quote-icon-wrap"><img
-                                            src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e65f9ca7705e44c8ac02c_testimonial-quote-icon.svg"
-                                            loading="lazy" alt="quote image
-    " class="testimonial-quote-icon" /></div>
-                                    <h3 class="testimonial-main-content">Excellent service! The team was professional, and my AC is running like new. Highly recommend!</h3>
-                                </div>
-                                <div class="testimonial-details-wrap">
-                                    <h3 class="testimonial-author-name">Kenneth Ochieng</h3>
-                                    <p class="testimonial-details-content">Business Owner</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-slide w-slide">
-                        <div class="testimonial-wrap">
-                            <div class="testimonial-image-wrap"><Image
-                                src={brandLogo}
-                                    loading="lazy"
-                                    sizes="(max-width: 479px) 64vw, (max-width: 767px) 52vw, (max-width: 991px) 280px, 330px"
-                                    alt="testimonial image" class="testimonial-image" /></div>
-                            <div class="testimonial-line-break-icon-wrap"><img
-                                    src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e652e9b293ab953e08bf8_testimonial-line-break-icon.svg"
-                                    loading="lazy" alt="testimonial image" class="testimonial-line-break-icon" /></div>
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-top-content-wrap">
-                                    <div class="testimonial-quote-icon-wrap"><img
-                                            src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e65f9ca7705e44c8ac02c_testimonial-quote-icon.svg"
-                                            loading="lazy" alt="quote image
-    " class="testimonial-quote-icon" /></div>
-                                    <h3 class="testimonial-main-content">Fast and reliable! They fixed my unit in no time, just before the heat wave. Lifesavers!</h3>
-                                </div>
-                                <div class="testimonial-details-wrap">
-                                    <h3 class="testimonial-author-name">Ian Gacheru</h3>
-                                    <p class="testimonial-details-content">Home Owner</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-slide w-slide">
-                        <div class="testimonial-wrap">
-                            <div class="testimonial-image-wrap"><Image
-                                    src={brandLogo}
-                                    loading="lazy"
-                                    sizes="(max-width: 479px) 64vw, (max-width: 767px) 52vw, (max-width: 991px) 280px, 330px"
-                                    alt="testimonial image" class="testimonial-image"  /></div>
-                            <div class="testimonial-line-break-icon-wrap"><img
-                                    src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e652e9b293ab953e08bf8_testimonial-line-break-icon.svg"
-                                    loading="lazy" alt="testimonial image" class="testimonial-line-break-icon" /></div>
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-top-content-wrap">
-                                    <div class="testimonial-quote-icon-wrap"><img
-                                            src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e65f9ca7705e44c8ac02c_testimonial-quote-icon.svg"
-                                            loading="lazy" alt="quote image
-    " class="testimonial-quote-icon" /></div>
-                                    <h3 class="testimonial-main-content">Great pricing and top-notch customer service. Will definitely call them again!</h3>
-                                </div>
-                                <div class="testimonial-details-wrap">
-                                    <h3 class="testimonial-author-name">Kulabu James</h3>
-                                    <p class="testimonial-details-content">Business Owner</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-left-arrow w-slider-arrow-left">
-                    <div>Prev</div>
-                    <div class="testimonial-arrow-icon-wrap"><img
-                            src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/662c8f506e0e4feedf8068f1_testimonial-arrow.svg"
-                            loading="lazy" alt="testimonial arrow" class="testimonial-arrow-icon" /></div><img
-                        src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/662c8fc429d45f08ffe415f0_testimonial-arrow-quote.svg"
-                        loading="lazy" alt="testimonial quote" class="testimonial-arrow-quote" />
-                </div>
-                <div data-w-id="7b91daf9-65cb-2ce8-c934-2b32f82a4850"
-                    class="testimonial-right-arrow w-slider-arrow-right">
-                    <div>Next</div>
-                    <div class="testimonial-arrow-icon-wrap"><img
-                            src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/662c8f506e0e4feedf8068f1_testimonial-arrow.svg"
-                            loading="lazy" alt="testimonial arrow" class="testimonial-arrow-icon" /></div>
-                    <div class="testimonial-quote-wrap">
-                        <div class="testimonial-quote"></div>
-                        <div class="testimonial-quote"></div>
-                    </div>
-                </div>
-                <div class="testimonial-nav w-slider-nav w-round w-num"></div>
-            </div>
-            <div class="cta-section-line-break"></div>
-            <ClientLogo/>
-            <div class="feedback-cta-whole-wrap">
-                <div class="feedback-cta-main-wrap">
-                    <div data-w-id="3f370244-bddb-785b-afab-e34a0e655553" style="opacity:0"
-                        class="feedback-cta-content-wrap">
-                        <div class="feedback-cta-title-wrap">
-                            <h2 class="section-title">Let Us Handle All Your Air Conditioning Needs.</h2>
-                        </div>
-                        <p class="section-content">Our company takes pride in providing reliable and efficient air conditioning solutions tailored to your comfort and business requirements.</p>
-                        <div class="feedback-cta-list-main-wrap">
-                            <div class="feedback-cta-list-item">
-                                <div class="feedback-cta-icon-wrap"><img
-                                        src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e6b2a3e47239008f617a8_feedback-cta-icon.svg"
-                                        loading="lazy" alt="social icon" class="feedback-cta-icon" /></div>
-                                <p class="feedback-cta-list-content">Customized cooling solutions for your space.</p>
-                            </div>
-                            <div class="feedback-cta-list-item">
-                                <div class="feedback-cta-icon-wrap"><img
-                                        src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e6b2a3e47239008f617a8_feedback-cta-icon.svg"
-                                        loading="lazy" alt="social icon" class="feedback-cta-icon" /></div>
-                                <p class="feedback-cta-list-content">Consistent, high-quality service you can trust.</p>
-                            </div>
-                            <div class="feedback-cta-list-item">
-                                <div class="feedback-cta-icon-wrap"><img
-                                        src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e6b2a3e47239008f617a8_feedback-cta-icon.svg"
-                                        loading="lazy" alt="social icon" class="feedback-cta-icon" /></div>
-                                <p class="feedback-cta-list-content">Timely maintenance and repairs every time.</p>
-                            </div>
-                            <div class="feedback-cta-list-item">
-                                <div class="feedback-cta-icon-wrap"><img
-                                        src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/661e6b2a3e47239008f617a8_feedback-cta-icon.svg"
-                                        loading="lazy" alt="social icon" class="feedback-cta-icon" /></div>
-                                <p class="feedback-cta-list-content">Energy-efficient systems at budget-friendly rates.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feedback-cta-contact-wrap">
-                        <div data-w-id="3f370244-bddb-785b-afab-e34a0e65556f" style="opacity:0"
-                            class="feedback-contact-wrap">
-                            <h3 class="feedback-contact-title">Nairobi, Kenya</h3>
-                            <p class="contact-content">{seoContent[0].companyAddress}</p><a
-                                href={`mailto:${seoContent[0].companyEmail}`} class="feedback-contact-link">{seoContent[0].companyEmail}</a>
-                            <div class="feedback-social-wrap"><a href="https://www.instagram.com/" target="_blank"
-                                    class="feedback-social-link w-inline-block"><img
-                                        src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/662ccf15a46ae80c0f84aea2_feedback-cta-social-1.svg"
-                                        loading="lazy" alt="feedback icon" class="feedback-social-image" /></a><a
-                                    href="https://www.facebook.com/" target="_blank"
-                                    class="feedback-social-link w-inline-block"><img
-                                        src="https://cdn.prod.website-files.com/661caa5ae3dacb8bb23f4d00/662ccf15b1d0f42ab3ce24f7_feedback-cta-social-2.svg"
-                                        loading="lazy" alt="social icon" class="feedback-social-image" /></a></div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div data-w-id="39777aea-aca9-6dad-d3e5-f1e061f0d5df" style="opacity:0" class="feedback-cta-form">
-                    <div class="feedback-form-block w-form">
-                        <form action="https://api.web3forms.com/submit" id="wf-form-Enquiry-Form" name="wf-form-Enquiry-Form" data-name="Enquiry Form"
-                            method="POST" class="feedback-form" data-wf-page-id="661caa5ae3dacb8bb23f4d0c"
-                            data-wf-element-id="39777aea-aca9-6dad-d3e5-f1e061f0d5e1">
-                           <input type="hidden" name="access_key" value="fbfe5d8c-5f66-4c7f-9570-50d70e2abc13" />
-                            <div class="feedback-form-field-wrap"><label for="Name-6"
-                                    class="feedback-form-text-label">Your Name</label><input
-                                    class="feedback-form-field w-input" maxlength="256" name="Name" data-name="Name"
-                                    placeholder="John" type="text" id="Name-6" required="" /></div>
-                            <div class="feedback-form-field-wrap"><label for="Phone-number"
-                                    class="feedback-form-text-label">Phone Number</label><input
-                                    class="feedback-form-field w-input" maxlength="256" name="Phone-number"
-                                    data-name="Phone number" placeholder={seoContent[0].companyPhone} type="tel" id="Phone-number"
-                                    required="" /></div>
-                                    <div class="feedback-form-field-wrap"><label for="Phone-number"
-                                        class="feedback-form-text-label">Details</label><input
-                                        class="feedback-form-field w-input" maxlength="256" name="Phone-number"
-                                        data-name="Phone number" placeholder="Hello, I'd like to schedule a call with you" type="tel" id="Phone-number"
-                                        required="" /></div>
-                            <div class="feedback-form-check-box-wrap"><label
-                                    class="w-checkbox feedback-checkbox-field-wrap">
-                                    <div
-                                        class="w-checkbox-input w-checkbox-input--inputType-custom feedback-form-check-box">
-                                    </div><input type="checkbox"
-                                        name="By-clicking-on-this-button-I-agree-to-the-processi-2"
-                                        id="By-clicking-on-this-button-I-agree-to-the-processi-2"
-                                        data-name="By Clicking On This Button I Agree To The Processi 2"
-                                        style="opacity:0;position:absolute;z-index:-1" /><span
-                                        class="feedback-checkbox-label w-form-label"
-                                        for="By-clicking-on-this-button-I-agree-to-the-processi-2">By clicking on this
-                                        button, I agree to the process</span>
-                                </label></div>
-                            <div class="feedback-form-button-wrap"><input type="submit" data-wait="Please wait..."
-                                    class="secondary-button w-button" value="Submit Request" /></div>
-                        </form>
-                        <div class="success-message w-form-done">
-                            <div>Thank you! Your submission has been received!</div>
-                        </div>
-                        <div class="error-message w-form-fail">
-                            <div>This feature is still in development and should be available soon. Stay Tuned!</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <Feedback/>
     
     <Blogpreview/>
    <Footer/>
